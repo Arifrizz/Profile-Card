@@ -1,0 +1,238 @@
+/* Video Background Styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7; /* Adjust opacity for better readability */
+}
+
+/* General body settings */
+body {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+    position: relative; /* Ensures that the content is properly positioned over the video */
+}
+
+body:hover {
+    background-color: #1a1a1a;
+}
+
+/* Profile section settings */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Profile card settings */
+.profile-card {
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    z-index: 1; /* Ensures the profile card is above the video */
+}
+
+/* Hover effect for profile card */
+.profile-card:hover {
+    transform: translateY(-20px);
+    background-color: #333;
+}
+
+/* Profile image settings */
+.profile-image-container {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border: 6px solid #ff4081; /* Pink ring by default */
+    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.6); /* Subtle shadow with pink color */
+    animation: dropIn 1s ease-out; /* Apply drop animation */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+    border-color: #333; /* Darker ring on hover */
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Name styling */
+h2 {
+    color: #ff4081;
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+/* Text styling */
+p {
+    margin: 5px 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin: 25px 0;
+    animation: fadeInUp 1.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    margin: 0 12px;
+    border-radius: 50%;
+    background-color: #2a2a2a; /* Set a neutral background color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.social-icon img {
+    width: 60%;
+    height: 60%;
+    transition: transform 0.4s ease;
+}
+
+.social-icon:hover {
+    transform: rotate(12deg) scale(1.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    background-color: #ff4081; /* Pink background on hover */
+}
+
+.social-icon:hover img {
+    transform: rotate(-12deg);
+}
+
+/* Follow stats styling */
+.follow-stats {
+    color: #ff4081;
+    font-size: 16px;
+    font-weight: 400;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    animation: fadeInUp 2s ease-in-out;
+    z-index: 1; /* Ensures the footer is above the video */
+}
+
+/* Animation settings */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Top Left Corner Image Styling */
+.corner-image-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2; /* Ensures the corner image is above other elements */
+    animation: fadeIn 1.5s ease-in-out, dropIn 1s ease-out;
+}
+
+.corner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 4px rgba (0, 0, 0, 0.6); /* Pink ring by default */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow with pink color */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for corner image */
+.corner-image-container:hover .corner-image {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+    border-color: #333; /* Darker ring on hover */
+}
+
+/* Animation settings */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

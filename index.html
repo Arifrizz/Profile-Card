@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="background-video">
+        <source src="resources/your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Top Left Corner Image with Redirect -->
+    <div class="corner-image-container">
+        <a href="https://www.viit.ac.in/" target="_blank">
+            <img src="resources/viit.png" alt="Corner Image" class="corner-image">
+        </a>
+    </div>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-card">
+            <div class="profile-image-container">
+                <img src="resources/profile-image-placeholder.png" alt="Profile Image" class="profile-image">
+            </div>
+            <h2>Abdul Arif</h2>
+            <p>ariif00vi@gmail.com</p>
+            <p>Developer | Designer</p>
+            <div class="social-icons">
+                <a href="https://github.com/Arifrizz" target="_blank"><img src="resources/github.png" alt="GitHub" class="social-icon"></a>
+                <a href="https://x.com/Arif00vi" target="_blank"><img src="resources/twitter.png" alt="Twitter" class="social-icon"></a>
+                <a href="https://www.linkedin.com/in/arif-abdul-b95134289/" target="_blank"><img src="resources/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="resources/youtube.png" alt="YouTube" class="social-icon"></a>
+            </div>
+            <div class="follow-stats">
+                <p>500k Followers | 5k Following</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Artificial Intelligence Student's Association</p>
+    </footer>
+
+    <script src="resources/scripts.js"></script>
+</body>
+</html>
